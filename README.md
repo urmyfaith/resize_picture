@@ -129,12 +129,19 @@ python文件所在目录为"**D:\desktop\demo\**"
 
 ## 测试结果:
 测试的文件目录
+
 ![test-py-file-tree.png](https://raw.githubusercontent.com/urmyfaith/resize_picture/master/images/test-py-file-tree.png)
+
 测试前照片大小
+
 ![file_size_befor_test.png](https://raw.githubusercontent.com/urmyfaith/resize_picture/master/images/file_size_befor_test.png)
+
 测试后照片大小
+
 ![file_size_after_resize.png](https://raw.githubusercontent.com/urmyfaith/resize_picture/master/images/tfile_size_after_resize.png)
+
 生产的log.info查看
+
 ![log_info.png](https://raw.githubusercontent.com/urmyfaith/resize_picture/master/images/log_info.png)
 
 
