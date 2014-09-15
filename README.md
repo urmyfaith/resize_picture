@@ -138,7 +138,7 @@ python文件所在目录为"**D:\desktop\demo\**"
 
 测试后照片大小
 
-![file_size_after_resize.png](https://raw.githubusercontent.com/urmyfaith/resize_picture/master/images/tfile_size_after_resize.png)
+![file_size_after_resize.png](https://raw.githubusercontent.com/urmyfaith/resize_picture/master/images/file_size_after_resize.png)
 
 生产的log.info查看
 
