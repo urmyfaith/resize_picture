@@ -147,3 +147,44 @@ python文件所在目录为"**D:\desktop\demo\**"
 
 ## 另外,文件支持中文目录
 
+
+---- 
+
+update 2016-08-17
+
+## mac 下使用 ImageMagick 批量压缩
+
+1) 使用 renamer 或者 nameChanger 对文件进行批量重命名
+2) 使用 脚本批量压缩
+
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+import os
+import os.path
+import sys
+import commands
+path=os.path.dirname(__file__)
+for root, dirs,files in os.walk(path):
+    current_dir=root
+    if not len(files):
+       pass
+    else:
+       for f in files:
+           if f.endswith('.jpg') :
+               filepath = os.path.join(current_dir,f)
+               outputfile = "small_" + f
+               resizeCommand =  "convert " + f + " -resize 640x640^ "  +  outputfile
+               a,b = commands.getstatusoutput(resizeCommand )
+               print("resize " + f + " to " + outputfile + " status: ", a,b + "\n");
+```
+
+输出结果:
+
+```bash
+# zsh
+➜  20160816 ./resize.py
+('resize 2011-04-13-15-54-41-012.jpg to small_2011-04-13-15-54-41-012.jpg status: ', 0, '\n')
+('resize 2011-04-13-16-04-39-030.jpg to small_2011-04-13-16-04-39-030.jpg status: ', 0, '\n')
+('resize 2011-04-13-17-33-21-032.jpg to small_2011-04-13-17-33-21-032.jpg status: ', 0, '\n')
+```
